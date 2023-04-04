@@ -7,8 +7,8 @@
 #include <math.h>
 
 //****************** Q1 ******************
-#define WIDTH 14
-#define HEIGHT 2
+#define WIDTH 140
+#define HEIGHT 20
 
 void generateSine()
 {
@@ -16,13 +16,13 @@ void generateSine()
     int i, j, y;
     double x, sine;
     
-    for(y = HEIGHT; y >= -HEIGHT; y--)// Dikey eksende HEIGHT ile -HEIGHT arasýndaki deðerleri temsil eden 2*HEIGHT+1 satýr oluþturulur
+    for(y = HEIGHT; y >= -HEIGHT; y--)// Dikey eksende HEIGHT ile -HEIGHT arasÄ±ndaki deÄŸerleri temsil eden 2*HEIGHT+1 satÄ±r oluÅŸturulur
     {
-        for(i = 0; i < WIDTH; i++)// Yatay eksende 0 ile WIDTH arasýndaki deðerleri temsil eden sütunlar oluþturulur
+        for(i = 0; i < WIDTH; i++)// Yatay eksende 0 ile WIDTH arasÄ±ndaki deÄŸerleri temsil eden sÃ¼tunlar oluÅŸturulur
         {
-            x = (double)i / WIDTH * 2 * M_PI;// x için açý dönüþümü
-            sine = sin(x);                   // sinüs hesaplanmasý 
-            if(sine * HEIGHT >= y && sine * HEIGHT < y + 1){ // Yükseklik, dikey konuma eþitse * yazdýrlýr
+            x = (double)i / WIDTH * 2 * M_PI;// x iÃ§in aÃ§Ä± dÃ¶nÃ¼ÅŸÃ¼mÃ¼
+            sine = sin(x);                   // sinÃ¼s hesaplanmasÄ± 
+            if(sine * HEIGHT >= y && sine * HEIGHT < y + 1){ // YÃ¼kseklik, dikey konuma eÅŸitse * yazdÄ±rlÄ±r
                 printf("*");
             } else{
                 printf(" ");
@@ -39,14 +39,14 @@ double line_segment_distance(int x1,int y1,int x2,int y2,int x3,int y3)
     double px = x2 - x1; 
     double py = y2 - y1; 
     double temp = px * px + py * py;  
-    double u = ((x3 - x1) * px + (y3 - y1) * py) / (temp); // C(x3,y3) noktasýnýn doðru parçasý üzerindeki konumu hesaplanýr ve u deðiþkenine atanýr
+    double u = ((x3 - x1) * px + (y3 - y1) * py) / (temp); // C(x3,y3) noktasÄ±nÄ±n doÄŸru parÃ§asÄ± Ã¼zerindeki konumu hesaplanÄ±r ve u deÄŸiÅŸkenine atanÄ±r
     if(u > 1){
         u = 1;
     }else if(u < 0){
         u = 0;
     }
-    double x = x1 + u * px; // (x3,y3) noktasýnýn doðru parçasý üzerindeki izdüþümünün x koordinatý hesaplanýr
-    double y = y1 + u * py; // (x3,y3) noktasýnýn doðru parçasý üzerindeki izdüþümünün y koordinatý hesaplanýr
+    double x = x1 + u * px; // (x3,y3) noktasÄ±nÄ±n doÄŸru parÃ§asÄ± Ã¼zerindeki izdÃ¼ÅŸÃ¼mÃ¼nÃ¼n x koordinatÄ± hesaplanÄ±r
+    double y = y1 + u * py; // (x3,y3) noktasÄ±nÄ±n doÄŸru parÃ§asÄ± Ã¼zerindeki izdÃ¼ÅŸÃ¼mÃ¼nÃ¼n y koordinatÄ± hesaplanÄ±r
     double dx = x - x3; 
     double dy = y - y3; 
     double distance = sqrt(dx * dx + dy * dy); // mesafe hesaplama
