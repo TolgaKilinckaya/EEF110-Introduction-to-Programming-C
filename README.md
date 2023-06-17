@@ -32,3 +32,31 @@ values.
 ### Output
 
 ![image](https://user-images.githubusercontent.com/119072606/234716217-2a4359dd-b032-479f-b70a-49ac61fa7970.png)
+
+******************************************
+
+## Homework 3
+### Description
+
+1. A data type called Node is used to encapsulate data and to implement the data type Stack. Stack
+is used with a Last-In-First-Out data exchange strategy. This data type is going to be implemented like the
+Linked-List. Implement the following functions,<br />
+• <b>void print(Stack* s):</b> prints the stack (only for debug purposes).<br />
+• <b>void push(Stack* s,int val):</b> adds the new value to the stack.<br />
+• <b>int pop(Stack* s):</b> removes the last added value from the stack.<br />
+
+2. The data type created in the previous question called Stack is going to be used to develop an interpreter.
+This interpreter uses a special syntax where if two numbers are given consecutively they are pushed into the
+stack, if an operator is detected then two numbers are popped from the stack, the operator is applied to the
+numbers and the result is pushed back into the stack. Using this, it is possible to implement a mathematical
+interpreter.<br />
+• <b>int str2num(char* str):</b> a helper function which converts an entire string into an integer.<br />
+• <b>int interpret(Stack* s,const char* str):</b> uses the provided stack and the string, interprets
+the string’s mathematical syntax content and returns the appropriate result as an integer.<br />
+Only integers are used and all operations are integer operations. Only +,−, ∗ and / are supported.
+
+### Output
+
+![Screenshot 2023-06-17 204138](https://github.com/TolgaKilinckaya/EEF110-Introduction-to-Programming-C/assets/119072606/6f2fc2e3-8619-4665-9988-897fd0c15b9a)
+
+
