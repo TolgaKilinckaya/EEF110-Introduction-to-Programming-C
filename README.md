@@ -59,4 +59,32 @@ Only integers are used and all operations are integer operations. Only +,−, �
 
 ![Screenshot 2023-06-17 204138](https://github.com/TolgaKilinckaya/EEF110-Introduction-to-Programming-C/assets/119072606/6f2fc2e3-8619-4665-9988-897fd0c15b9a)
 
+******************************************
 
+## Quiz 3
+### Description
+
+A code that generates smooth curves is going to be implemented. Implement the
+functions given in the template,<br />
+• <b>void CreateScreen(char**,int,int):</b> is responsible to generate a screen
+array of characters.<br />
+• <b>void DestroyScreen(char*):</b> frees the memory allocated.<br />
+• <b>void PrintScreen(char*,int,int):</b> as the name implies prints the char
+array to the screen.<br />
+• <b>void MixCoordinates(float (*)[2],float[2],float[2],float):</b> blends
+two 2d-vectors into one by using v3 = (1 − t)v1 + tv2, where 0 ≤ t ≤ 1.<br />
+• <b>void GenerateCurve(char**,int,int,float[2],float[2],float[2],float[2]:</b> uses 4 points to generate the curve. It mixes the 2d-vectors like<br />
+
+a=mix p_0 and p_1<br />
+b=mix p_1 and p_2<br />
+c=mix p_2 and p_3<br />
+d=mix a and b<br />
+e=mix b and c<br />
+
+where 0 ≤ t ≤ 1. And places a ’+’ character on the character array to be
+printed on the screen. Place also ’x’ characters for the points p0, p1, p2 and p3.<br />
+
+### Output
+
+![image](https://github.com/TolgaKilinckaya/EEF110-Introduction-to-Programming-C/assets/119072606/c50ef67d-3c3b-42c5-8fc2-8fdf5843008f)
+![image](https://github.com/TolgaKilinckaya/EEF110-Introduction-to-Programming-C/assets/119072606/3284d861-252a-47e5-9824-34291a6b45b5)
